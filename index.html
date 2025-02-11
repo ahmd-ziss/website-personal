@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>APA YAK</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        text-align: center;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #ffe4e1;
+      }
+
+      img {
+        width: 200px;
+        height: 300px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+
+      h1 {
+        color: #ff1493;
+      }
+
+      button {
+        font-size: 18px;
+        padding: 10px 20px;
+        margin: 10px;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: 0.3s;
+      }
+
+      #btn_boleh {
+        background-color: #dc3545;
+        color: white;
+      }
+
+      #btn_enggak {
+        background-color: #28a745;
+        color: white;
+        position: absolute;
+        transition: top 0.2s ease, left 0.2s ease;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="Muahhh.jpg" alt="Gambar Cewek" onerror="this.src='default.jpg'" />
+    <h1>CAKEP GA GUAA ??</h1>
+    <button id="btn_boleh" onclick="alert('Engga salah lagi.. wleee 😋🫠🫠')">ENGGA</button>
+    <button id="btn_enggak" onclick="enggak(this)" onmouseover="enggak(this)">IYAA</button>
+
+    <script>
+      function enggak(id) {
+        var maxWidth = window.innerWidth - id.offsetWidth;
+        var maxHeight = window.innerHeight - id.offsetHeight;
+
+        var newX = Math.random() * maxWidth;
+        var newY = Math.random() * maxHeight;
+
+        id.style.left = newX + "px";
+        id.style.top = newY + "px";
+      }
+    </script>
+  </body>
+</html>
